@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="todo-app">
+      <h2>TO-Do List<img src="assets/image.png" alt="Image"></h2>
+      <div class="row">
+        <input type="text" [(ngModel)]="task" placeholder="Enter new task">
+        <button (click)="addTask()">Add Task</button>
+      </div>
+      <ul>
+        <li *ngFor="let item of taskList; let i = index">
+          {{ item }}
+          <span (click)="removeTask(i)">&#10006;</span>
+        </li>
+      </ul>
+    </div>
+  </div>
